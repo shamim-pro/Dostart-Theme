@@ -15,6 +15,15 @@ define('DOSTART_THEME_VERSION', wp_get_theme()->get('Version'));
 define('DOSTART_THEME_DIR', trailingslashit(get_template_directory()));
 define('DOSTART_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
 
+/*
+* Load Kirki template file
+*/
+locate_template('/assets/kirki/kirki.php', true, true);
+//Check if Kirki is active
+if (class_exists('Kirki')) {
+    locate_template('customizer', true, true);
+}
+
 if ( ! function_exists('dostart_theme_setup') ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.

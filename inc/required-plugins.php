@@ -8,13 +8,6 @@ add_action('tgmpa_register', 'dostart_register_required_plugins');
 function dostart_register_required_plugins() {
 
     $plugins = array(
-
-        array(
-            'name'     => 'Kirki Customizer Framework',
-            'slug'     => 'kirki',
-            'required' => false,
-        ),
-
         array(
             'name'     => 'Unlimited Theme Addons',
             'slug'     => 'unlimited-theme-addons',
